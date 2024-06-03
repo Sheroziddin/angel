@@ -119,7 +119,7 @@
 
         function drawCharacters() {
             const playerImg = new Image();
-            playerImg.src = 'C:\\Users\\user\\Desktop\\game\\photo_2024-06-03_17-04-38.jpg'; // Путь к фотографии главного персонажа
+            playerImg.src = 'photo_2024-06-03_17-04-38.jpg'; // Путь к фотографии главного персонажа
             playerImg.onload = () => {
                 ctx.drawImage(playerImg, playerPos.x* cellSize, playerPos.y * cellSize, cellSize, cellSize);
             };
