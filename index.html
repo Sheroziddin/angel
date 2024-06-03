@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Лабиринт</title>
     <style>
         body, html {
@@ -14,7 +14,7 @@
         canvas {
             display: block;
             margin: auto;
-            border: 1px solid black;
+            border: 1px solid rgb(58, 23, 255);
         }
         #door, #friendWindow {
             display: none;
@@ -27,23 +27,23 @@
             text-align: center;
         }
         #door img {
-            width: 200px; /* размер гифки */
+            width: 100px; /* размер гифки */
             height: auto;
         }
         #door p {
-            font-size: 20px;
+            font-size: 14px;
             margin-top: 10px;
         }
         #friendWindow {
-            width: 200px; /* размер окна для друга */
-            padding: 20px;
+            width: 150px; /* размер окна для друга */
+            padding: 10px;
             background: white;
-            border: 2px solid black;
+            border: 2px solid rgb(0, 38, 252);
             border-radius: 10px;
             text-align: center;
         }
         #friendWindow p {
-            font-size: 20px;
+            font-size: 14px;
         }
         .controls {
             position: absolute;
@@ -51,17 +51,19 @@
             left: 50%;
             transform: translateX(-50%);
             display: flex;
-            gap: 10px;
+            gap: 5px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
         .control-button {
-            padding: 10px 15px;
-            font-size: 16px;
+            padding: 5px 10px;
+            font-size: 12px;
             cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <canvas id="mazeCanvas" width="800" height="600"></canvas>
+    <canvas id="mazeCanvas" width="400" height="300"></canvas>
     <div id="door">
         <img src='photo_2024-06-03_17-04-35.jpg' alt="Сокровище"> <!-- Путь к гифке сокровища -->
         <p>Поздравляю с днём рождения моя любимая тварь, хотел добавить Сумасшедшую, но уже слишком геморно</p>
@@ -94,7 +96,7 @@
             [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
         ];
 
-        const cellSize = 40;
+        const cellSize = 20;
         const doorX = 18;
         const doorY = 1;
         const treasureX = 16; // Координаты сокровища
@@ -189,4 +191,6 @@
     </script>
 </body>
 </html>
+
+
 
