@@ -126,7 +126,7 @@
 
             if (!friendJoined) {
                 const friendImg = new Image();
-                friendImg.src = 'C:\\Users\\user\\Desktop\\game\\photo_2024-06-03_17-04-37.jpg'; // Путь к фотографии друга
+                friendImg.src = 'photo_2024-06-03_17-04-37.jpg'; // Путь к фотографии друга
                 friendImg.onload = () => {
                     ctx.drawImage(friendImg, friendPos.x * cellSize, friendPos.y * cellSize, cellSize, cellSize);
                 };
